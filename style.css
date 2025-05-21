@@ -1,0 +1,63 @@
+﻿body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+}
+
+.background {
+  background: url('background.jpg') no-repeat center center/cover;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.rose-container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: grow 5s ease-out forwards;
+}
+
+.rose {
+  width: 40px;
+  height: 100px;
+  background: red;
+  border-radius: 20px 20px 5px 5px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px red;
+}
+
+@keyframes grow {
+  from {
+    transform: translateX(-50%) scaleY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) scaleY(1);
+    opacity: 1;
+  }
+}
+
+.message {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 2px 2px 8px #000;
+  display: none;
+}
+
+.flower {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: pink;
+  border-radius: 50%;
+  box-shadow: 0 0 5px pink;
+}
